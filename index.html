@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="FarmDirect" />
+    <meta
+      property="og:description"
+      content="Direct marketplace connecting farmers with buyers through transparent bidding"
+    />
+    <meta
+      property="og:image"
+      content="https://mocha-cdn.com/og.png"
+      type="image/png"
+    />
+    <meta property="og:url" content="https://getmocha.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:author" content="FarmDirect" />
+    <meta property="og:site_name" content="FarmDirect" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:site" content="@farmdirect" />
+    <meta property="twitter:title" content="FarmDirect" />
+    <meta
+      property="twitter:description"
+      content="Direct marketplace connecting farmers with buyers through transparent bidding"
+    />
+    <meta
+      property="twitter:image"
+      content="https://mocha-cdn.com/og.png"
+      type="image/png"
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>FarmDirect</title>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#16a34a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="FarmDirect" />
+
+    <!-- PWA iOS Icons removed due to missing files -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/react-app/main.tsx"></script>
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+      if (
+        "serviceWorker" in navigator &&
+        !window.location.hostname.includes("localhost")
+      ) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((registration) => {
+              console.log("SW registered: ", registration);
+            })
+            .catch((registrationError) => {
+              console.log("SW registration failed: ", registrationError);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

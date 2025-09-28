@@ -1,0 +1,40 @@
+{
+  "name": "FarmDirect - Agricultural Marketplace",
+  "short_name": "FarmDirect",
+  "description": "Direct marketplace connecting farmers with buyers through transparent bidding",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#16a34a",
+  "orientation": "portrait-primary",
+  "categories": ["agriculture", "marketplace", "business"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/manifest.json",
+      "sizes": "any",
+      "type": "application/json",
+      "purpose": "any"
+    }
+  ],
+
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "View your crop listings and bids",
+      "url": "/dashboard",
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Browse Crops",
+      "short_name": "Browse",
+      "description": "Browse available crops",
+      "url": "/dashboard",
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}

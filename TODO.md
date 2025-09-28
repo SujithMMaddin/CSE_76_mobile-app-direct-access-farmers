@@ -1,0 +1,3 @@
+- [x] Update src/react-app/pages/Home.tsx: Import hasProfile, modify useEffect to redirect to profile-setup only if !hasProfile, else to dashboard if hasProfile
+- [x] Update src/react-app/pages/ProfileSetup.tsx: Add check for hasProfile, redirect to dashboard if profile exists
+- [x] Test navigation: Start dev server, verify redirects for unauthenticated, authenticated without profile, authenticated with profile
