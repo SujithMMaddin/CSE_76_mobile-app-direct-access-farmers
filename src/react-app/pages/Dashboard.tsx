@@ -20,6 +20,8 @@ export default function Dashboard() {
   const { profile, hasProfile } = useUserProfile();
   const navigate = useNavigate();
   const [crops, setCrops] = useState<Crop[]>([]);
+  const [ownCrops, setOwnCrops] = useState<Crop[]>([]);
+  const [marketplaceCrops, setMarketplaceCrops] = useState<Crop[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [stats, setStats] = useState({
     totalListings: 0,
@@ -41,20 +43,42 @@ export default function Dashboard() {
 
   const fetchCrops = useCallback(async () => {
     try {
+      setIsLoading(true);
       const idToken = await user?.getIdToken();
-      const response = await fetch("/api/crops", {
-        headers: {
-          Authorization: `Bearer ${idToken}`,
-        },
-      });
-      const data = await response.json();
-      setCrops(data);
+      if (profile?.role === "farmer") {
+        // Fetch own crops
+        const responseOwn = await fetch("/api/crops?own=true", {
+          headers: {
+            Authorization: `Bearer ${idToken}`,
+          },
+        });
+        const ownData = await responseOwn.json();
+        setOwnCrops(ownData);
+
+        // Fetch all crops for marketplace
+        const responseAll = await fetch("/api/crops", {
+          headers: {
+            Authorization: `Bearer ${idToken}`,
+          },
+        });
+        const allData = await responseAll.json();
+        setMarketplaceCrops(allData);
+      } else {
+        // Buyers fetch all crops
+        const response = await fetch("/api/crops", {
+          headers: {
+            Authorization: `Bearer ${idToken}`,
+          },
+        });
+        const data = await response.json();
+        setCrops(data);
+      }
     } catch (error) {
       console.error("Failed to fetch crops:", error);
     } finally {
       setIsLoading(false);
     }
-  }, [user]);
+  }, [user, profile]);
 
   const fetchStats = useCallback(async () => {
     try {
@@ -71,7 +95,7 @@ export default function Dashboard() {
           (t: Transaction) => t.farmer_id === user?.uid
         );
         setStats({
-          totalListings: crops.length,
+          totalListings: ownCrops.length,
           activeBids: 0, // Would need additional API call
           totalEarnings: farmerTransactions.reduce(
             (sum: number, t: Transaction) =>
@@ -98,7 +122,7 @@ export default function Dashboard() {
     } catch (error) {
       console.error("Failed to fetch stats:", error);
     }
-  }, [profile, user, crops]);
+  }, [profile, user, ownCrops]);
 
   useEffect(() => {
     fetchCrops();
@@ -266,7 +290,8 @@ export default function Dashboard() {
               <div className="animate-spin w-8 h-8 border-4 border-green-500 border-t-transparent rounded-full mx-auto mb-4"></div>
               <p className="text-gray-600">Loading crops...</p>
             </div>
-          ) : crops.length === 0 ? (
+          ) : (profile.role === "farmer" ? ownCrops.length : crops.length) ===
+            0 ? (
             <div className="p-8 text-center">
               <Wheat className="w-16 h-16 text-gray-300 mx-auto mb-4" />
               <h3 className="text-lg font-medium text-gray-900 mb-2">
@@ -290,7 +315,7 @@ export default function Dashboard() {
             </div>
           ) : (
             <div className="divide-y divide-gray-200">
-              {crops.map((crop) => (
+              {(profile.role === "farmer" ? ownCrops : crops).map((crop) => (
                 <div
                   key={crop.id}
                   className="p-6 hover:bg-gray-50 transition-colors cursor-pointer"
@@ -356,6 +381,80 @@ export default function Dashboard() {
             </div>
           )}
         </div>
+
+        {/* Marketplace Section for Farmers */}
+        {profile.role === "farmer" && marketplaceCrops.length > 0 && (
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 mt-8">
+            <div className="p-6 border-b border-gray-200">
+              <h2 className="text-xl font-bold text-gray-900">Marketplace</h2>
+            </div>
+            <div className="divide-y divide-gray-200">
+              {marketplaceCrops.map((crop) => (
+                <div
+                  key={crop.id}
+                  className="p-6 hover:bg-gray-50 transition-colors cursor-pointer"
+                  onClick={() => navigate(`/crops/${crop.id}`)}
+                >
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-3 mb-2">
+                        <h3 className="text-lg font-semibold text-gray-900">
+                          {crop.crop_name}
+                          {crop.variety && (
+                            <span className="text-gray-600 font-normal">
+                              {" "}
+                              - {crop.variety}
+                            </span>
+                          )}
+                        </h3>
+                        <span
+                          className={`px-2 py-1 text-xs font-medium rounded-full ${
+                            crop.status === "OPEN"
+                              ? "bg-green-100 text-green-800"
+                              : crop.status === "SOLD"
+                              ? "bg-gray-100 text-gray-800"
+                              : "bg-red-100 text-red-800"
+                          }`}
+                        >
+                          {crop.status}
+                        </span>
+                      </div>
+
+                      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-gray-600">
+                        <div className="flex items-center">
+                          <Package className="w-4 h-4 mr-1" />
+                          {crop.available_quantity}kg available
+                        </div>
+                        <div className="flex items-center">
+                          <IndianRupee className="w-4 h-4 mr-1" />
+                          {formatCurrency(crop.base_price_per_kg)}/kg base
+                        </div>
+                        {crop.location && (
+                          <div className="flex items-center">
+                            <MapPin className="w-4 h-4 mr-1" />
+                            {crop.location}
+                          </div>
+                        )}
+                        {crop.status === "OPEN" && (
+                          <div className="flex items-center">
+                            <Clock className="w-4 h-4 mr-1" />
+                            {formatTimeRemaining(crop.auction_ends_at)}
+                          </div>
+                        )}
+                      </div>
+
+                      {crop.farmer_name && (
+                        <p className="text-sm text-gray-500 mt-2">
+                          By {crop.farmer_name}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </main>
     </div>
   );
