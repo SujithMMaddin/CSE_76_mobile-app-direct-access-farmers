@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App -->
+    <string name="app_name">🌾 ಡೈರೆಕ್ಟ್ ಆಕ್ಸೆಸ್ ಫಾರ್ಮರ್ಸ್</string>
+    <string name="change_language">ಭಾಷೆ ಬದಲಾಯಿಸಿ</string>
+
+    <!-- Login / Signup -->
+    <string name="email">ಇಮೇಲ್</string>
+    <string name="password">ಪಾಸ್‌ವರ್ಡ್</string>
+    <string name="login">ಲಾಗಿನ್</string>
+    <string name="dont_have_account">ಖಾತೆ ಇಲ್ಲವೇ? ನೋಂದಣಿ ಮಾಡಿ</string>
+
+    <string name="customer_login">🛒 ಗ್ರಾಹಕ ಲಾಗಿನ್</string>
+    <string name="farmer_login">🚜 ರೈತ ಲಾಗಿನ್</string>
+
+    <string name="customer_signup">ಗ್ರಾಹಕ ನೋಂದಣಿ</string>
+    <string name="name">ಹೆಸರು</string>
+    <string name="address">ವಿಳಾಸ</string>
+    <string name="confirm_password">ಪಾಸ್‌ವರ್ಡ್ ದೃಢೀಕರಿಸಿ</string>
+    <string name="register">ನೋಂದಣಿ</string>
+
+    <!-- Dashboard -->
+    <string name="available_crops">ಲಭ್ಯವಿರುವ ಬೆಳೆಗಳು</string>
+    <string name="no_crops">ಯಾವುದೇ ಬೆಳೆಗಳನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿಲ್ಲ.</string>
+
+    <!-- Crop Info -->
+    <string name="crop_name">ಬೆಳೆ ಹೆಸರು</string>
+    <string name="base_price">ಮೂಲ ಬೆಲೆ (₹/ಕೆಜಿ)</string>
+    <string name="quantity">ಪ್ರಮಾಣ (ಕೆಜಿ)</string>
+    <string name="location">ಸ್ಥಳ</string>
+    <string name="harvest_date">ಕೊಯ್ಲು ದಿನಾಂಕ</string>
+    <string name="bidding_ends">ಬಿಡ್ಡಿಂಗ್ ಅಂತ್ಯ</string>
+
+    <!-- Buttons -->
+    <string name="add_crop">🌾 ಹೊಸ ಬೆಳೆ ಸೇರಿಸಿ</string>
+    <string name="select_image">ಚಿತ್ರ ಆರಿಸಿ</string>
+    <string name="check_ai_market_price">🔎 ಮಾರುಕಟ್ಟೆ ಬೆಲೆ ನೋಡಿ</string>
+    <string name="book_transport">ಟ್ರಾನ್ಸ್‌ಪೋರ್ಟ್ ಬುಕ್ ಮಾಡು</string>
+    <string name="pay_now">💳 ಈಗ ಪಾವತಿ ಮಾಡಿ</string>
+
+    <!-- Bidding -->
+    <string name="place_bid">ಬಿಡ್ ಮಾಡಿ</string>
+    <string name="enter_your_bid">ನಿಮ್ಮ ಬಿಡ್ ನಮೂದಿಸಿ</string>
+    <string name="bid_amount">ಬಿಡ್ ಮೊತ್ತ</string>
+    <string name="use_suggested">ಸೂಚಿಸಿದವನ್ನು ಬಳಸಿ</string>
+    <string name="average_bid">ಸರಾಸರಿ ಬಿಡ್</string>
+    <string name="no_bids_yet">ಇನ್ನೂ ಯಾವುದೇ ಬಿಡ್ ಇಲ್ಲ.</string>
+    <string name="view_bids">📊 ಬಿಡ್‌ಗಳನ್ನು ನೋಡಿ</string>
+    <string name="view_bids_my_crops">📊 ನನ್ನ ಬೆಳೆಗಳ ಬಿಡ್‌ಗಳನ್ನು ನೋಡಿ</string>
+
+    <string name="add_new">ಹೊಸ ಬೆಳೆ ಹೆಸರನ್ನು ಸೇರಿಸಿ</string>
+
+    <string name="bidding_end_date">ಲಿಲಾವಿನ ಅಂತಿಮ ದಿನಾಂಕ</string>
+
+    <string name="current_highest">ಪ್ರಸ್ತುತ ಅತ್ಯುನ್ನತ ಲೇಲಾ:</string>
+    <string name="confirm_winner">✅ ವಿಜೇತರನ್ನು ದೃಢೀಕರಿಸಿ</string>
+
+    <string name="market_price_title">ಮಾರುಕಟ್ಟೆ ಬೆಲೆ ಸಹಾಯಕ</string>
+    <string name="enter_crop_name">ಬೆಳೆ ಹೆಸರು ನಮೂದಿಸಿ (ಉದಾ: ಟೊಮೆಟೋ)</string>
+    <string name="voice_search">ಧ್ವನಿ ಹುಡುಕಾಟ</string>
+    <string name="check_market_price">ಮಾರುಕಟ್ಟೆ ಬೆಲೆಯನ್ನು ಪರಿಶೀಲಿಸಿ</string>
+    <string name="select_language">ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ:</string>
+    <string name="result_will_appear">ಫಲಿತಾಂಶ ಇಲ್ಲಿ ತೋರಿಸಲಾಗುತ್ತದೆ...</string>
+    <string name="phone_number">ದೂರವಾಣಿ ಸಂಖ್ಯೆ</string>
+
+
+    <!-- Navigation -->
+    <string name="next">ಮುಂದೆ</string>
+    <string name="previous">ಹಿಂದೆ</string>
+
+    <!-- Dummy -->
+    <string name="lorem_ipsum">ಲೋರಮ್ ಇಪ್ಸಮ್ ಪಠ್ಯ...</string>
+
+</resources>

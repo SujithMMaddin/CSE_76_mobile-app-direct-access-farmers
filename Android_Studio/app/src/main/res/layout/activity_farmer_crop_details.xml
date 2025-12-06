@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Crop Name -->
+        <TextView
+            android:id="@+id/tvCropName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crop Name"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Base Price -->
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Base Price: ₹"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Quantity -->
+        <TextView
+            android:id="@+id/tvQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quantity: 100kg"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Location -->
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location: Karnataka"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Harvest Date -->
+        <TextView
+            android:id="@+id/tvHarvestDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Harvest Date: 2025-11-01"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Bidding End Date -->
+        <TextView
+            android:id="@+id/tvBiddingEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bidding Ends: 2025-11-05"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Winner Info -->
+        <TextView
+            android:id="@+id/tvWinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Winner: -"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"
+            android:visibility="gone"
+            android:layout_marginTop="16dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginVertical="12dp" />
+
+        <Button
+            android:id="@+id/btnSelectWinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎯 Select Winner Manually"
+            android:backgroundTint="#2196F3"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="12dp" />
+
+
+        <!-- Bids List -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/view_bids"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerBids"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Progress -->
+        <ProgressBar
+            android:id="@+id/progressDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

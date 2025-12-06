@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App -->
+    <string name="app_name">🌾 डायरेक्ट एक्सेस फार्मर्स</string>
+    <string name="change_language">भाषा बदलें</string>
+
+    <!-- Login / Signup -->
+    <string name="email">ईमेल</string>
+    <string name="password">पासवर्ड</string>
+    <string name="login">लॉगइन</string>
+    <string name="dont_have_account">खाता नहीं है? साइन अप करें</string>
+
+    <string name="customer_login">🛒 ग्राहक लॉगइन</string>
+    <string name="farmer_login">🚜 किसान लॉगइन</string>
+
+    <string name="customer_signup">ग्राहक पंजीकरण</string>
+    <string name="name">नाम</string>
+    <string name="address">पता</string>
+    <string name="confirm_password">पासवर्ड पुष्टि करें</string>
+    <string name="register">पंजीकरण</string>
+
+    <!-- Dashboard -->
+    <string name="available_crops">उपलब्ध फसलें</string>
+    <string name="no_crops">कोई फसल अपलोड नहीं की गई है।</string>
+
+    <!-- Crop Info -->
+    <string name="crop_name">फसल का नाम</string>
+    <string name="base_price">बेस प्राइस (₹/किलो)</string>
+    <string name="quantity">मात्रा (किलो)</string>
+    <string name="location">स्थान</string>
+    <string name="harvest_date">कटाई की तिथि</string>
+    <string name="bidding_ends">बिडिंग समाप्त</string>
+
+    <!-- Buttons -->
+    <string name="add_crop">🌾 नई फसल जोड़ें</string>
+    <string name="select_image">चित्र चुनें</string>
+    <string name="check_ai_market_price">🔎 मार्केट प्राइस देखें</string>
+    <string name="book_transport">ट्रांसपोर्ट बुक करें</string>
+    <string name="pay_now">💳 अभी भुगतान करें</string>
+
+    <!-- Bidding -->
+    <string name="place_bid">बिड करें</string>
+    <string name="enter_your_bid">अपनी बिड दर्ज करें</string>
+    <string name="bid_amount">बिड राशि</string>
+    <string name="use_suggested">सुझाव का उपयोग करें</string>
+    <string name="average_bid">औसत बिड</string>
+    <string name="no_bids_yet">अभी तक कोई बिड नहीं।</string>
+    <string name="view_bids">📊 बिड देखें</string>
+    <string name="view_bids_my_crops">📊 मेरी फसलों की बिड देखें</string>
+
+
+    <string name="add_new">नई फ़सल का नाम जोड़ें</string>
+
+    <string name="bidding_end_date">बोली समाप्ति तिथि</string>
+
+    <string name="current_highest">सबसे ऊँची बोली:</string>
+    <string name="confirm_winner">✅ विजेता की पुष्टि करें</string>
+
+    <string name="market_price_title">बाज़ार मूल्य सहायक</string>
+    <string name="enter_crop_name">फ़सल का नाम दर्ज करें (उदा: टमाटर)</string>
+    <string name="voice_search">वॉइस तलाश</string>
+    <string name="check_market_price">बाज़ार मूल्य जांचें</string>
+    <string name="select_language">भाषा चुनें:</string>
+    <string name="result_will_appear">परिणाम यहाँ दिखाई देगा...</string>
+    <string name="phone_number">फोन नंबर</string>
+
+
+    <!-- Navigation -->
+    <string name="next">आगे</string>
+    <string name="previous">पीछे</string>
+
+    <!-- Dummy -->
+    <string name="lorem_ipsum">Lorem ipsum नमूना पाठ...</string>
+
+</resources>

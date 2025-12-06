@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- ✅ App permissions go OUTSIDE the <application> tag -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DirectAccessFarmers"
+        tools:targetApi="31">
+        <activity
+            android:name=".TransportationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TransportActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DirectAccessFarmers" />
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DirectAccessFarmers" />
+        <activity
+            android:name=".FarmerMyCropsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FarmerCropBidsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CropDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MarketPriceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CropBidsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FarmerCropDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerDashboard"
+            android:exported="true" />
+        <activity
+            android:name=".CustomerRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FarmerDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DirectAccessFarmers" />
+        <activity
+            android:name=".FarmerLoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

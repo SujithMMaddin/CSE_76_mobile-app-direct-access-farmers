@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- TOP IMAGE -->
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="286dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/farm" />
+
+    <!-- Toolbar -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:elevation="10dp"
+        android:minHeight="?attr/actionBarSize"
+        android:titleTextColor="#FFFFFF"
+        app:title="@string/app_name" />
+
+    <Space
+android:layout_width="match_parent"
+android:layout_height="32dp" />
+
+<Button
+android:id="@+id/btnFarmerLogin"
+android:layout_width="match_parent"
+android:layout_height="60dp"
+android:layout_marginBottom="16dp"
+android:backgroundTint="#4CAF50"
+android:text="@string/farmer_login"
+android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnCustomerLogin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#FF9800"
+        android:text="@string/customer_login"
+        android:textSize="18sp" />
+
+</LinearLayout>

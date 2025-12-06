@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+
+    <!-- App -->
+    <string name="app_name">🌾 Direct Access Farmers</string>
+    <string name="change_language">Change Language</string>
+
+    <!-- Login / Signup -->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="dont_have_account">Don’t have an account? Sign Up</string>
+
+    <!-- Add emojis to Login buttons -->
+    <string name="customer_login">🛒 Customer Login</string>
+    <string name="farmer_login">🚜 Farmer Login</string>
+
+    <string name="customer_signup">Customer Sign Up</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="register">Register</string>
+
+    <string name="bidding_end_date">Bidding End Date</string>
+
+
+    <!-- Dashboard -->
+    <string name="add_new">Add New Crop Name</string>
+    <string name="available_crops">Available Crops</string>
+    <string name="no_crops">No crops uploaded yet.</string>
+
+    <!-- Crop Info -->
+    <string name="crop_name">Crop Name</string>
+    <string name="base_price">Base Price (₹/kg)</string>
+    <string name="quantity">Quantity (kg)</string>
+    <string name="location">Select Location</string>
+    <string name="harvest_date">Harvest Date</string>
+    <string name="bidding_ends">Bidding Ends</string>
+
+    <!-- Add New Crop (emoji added) -->
+    <string name="add_crop">🌾 Add New Crop</string>
+
+    <!-- Select Image -->
+    <string name="select_image">Select Image</string>
+
+    <!-- Check Market Price (emoji added) -->
+    <string name="check_ai_market_price">🔎 Check Market Price</string>
+
+    <!-- Book Transport -->
+    <string name="book_transport">Book Transport</string>
+
+    <!-- Pay Now (emoji already in XML but keeping consistent) -->
+    <string name="pay_now">💳 Pay Now</string>
+
+    <!-- Bidding -->
+    <string name="place_bid">Place Bid</string>
+    <string name="enter_your_bid">Enter Your Bid</string>
+    <string name="bid_amount">Bid Amount</string>
+    <string name="use_suggested">Use Suggested</string>
+    <string name="average_bid">Average Bid</string>
+    <string name="no_bids_yet">No bids yet. Be the first!</string>
+
+    <!-- View Bids (emoji added as requested) -->
+    <string name="view_bids">📊 View Bids</string>
+    <string name="view_bids_my_crops">📊 View Bids for My Crops</string>
+
+    <!-- Navigation Buttons -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+
+    <string name="current_highest">Current Highest:</string>
+    <string name="confirm_winner">✅ Confirm Winner</string>
+
+    <string name="market_price_title">Market Price Assistant</string>
+    <string name="enter_crop_name">Enter crop name (e.g., Tomato)</string>
+    <string name="voice_search">Voice Search</string>
+    <string name="check_market_price">Check Market Price</string>
+    <string name="select_language">Select Language:</string>
+    <string name="result_will_appear">Result will appear here...</string>
+    <string name="phone_number">Phone Number</string>
+
+
+
+
+    <!-- Dummy Text -->
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </string>
+
+</resources>

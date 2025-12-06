@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_margin="8dp"
+    android:elevation="3dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/tvCropName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crop Name"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/tvBasePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹500/kg"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACTIVE"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="6dp" />
+
+</LinearLayout>
